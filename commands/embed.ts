@@ -4,7 +4,7 @@ import {MessageEmbed} from "discord.js";
 export default {
     category: 'Testing',
     description: 'Sends an embed',
-
+    slash: true,
     permissions: ['ADMINISTRATOR'],
 
     callback: async ({message, text}) => {

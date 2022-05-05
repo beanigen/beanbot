@@ -4,8 +4,10 @@ import path from 'path'
 import dotenv from 'dotenv'
 
 
-const testGuildID = 'paste your test server ID here'
 dotenv.config()
+
+
+const testGuildID = process.env.TESTGUILD
 
 const client = new DiscordJS.Client({
     intents: [
