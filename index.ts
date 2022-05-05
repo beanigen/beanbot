@@ -3,6 +3,8 @@ import WOKCommands from 'wokcommands'
 import path from 'path'
 import dotenv from 'dotenv'
 
+
+const testGuildID = 'paste your test server ID here'
 dotenv.config()
 
 const client = new DiscordJS.Client({
@@ -18,7 +20,7 @@ client.on('ready', () => {
     new WOKCommands(client, {
         commandsDir: path.join(__dirname, 'commands'),
         typeScript: true,
-        testServers: '935873409278165033'
+        testServers: testGuildID
     })
 
 
