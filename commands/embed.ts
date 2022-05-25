@@ -9,8 +9,14 @@ export default {
 
     callback: async ({message, text}) => {
 
+        if (!text) {
+            return 'Please supply JSON data!'
+        }
+        
         const json = JSON.parse(text)
-
+        
+        
+        
         const embed = new MessageEmbed(json)
 
         return embed
